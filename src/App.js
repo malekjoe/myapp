@@ -3,7 +3,7 @@ function App() {
   return (
 <>
   <h2 className="title">
-    malek
+    hello
   </h2>
 </>
   );
