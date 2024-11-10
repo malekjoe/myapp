@@ -27,7 +27,7 @@ function App() {
       
       <div className={`App__Main-Page-content ${navbarOpen ? 'navbar-open' : ''}`}>
         <Routes>
-          <Route index path="/" element={<Home />} />
+          <Route index path="/myapp" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/skills" element={<Skills />} />
