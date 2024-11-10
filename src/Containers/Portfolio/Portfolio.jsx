@@ -13,19 +13,19 @@ const Portfolio = () => {
       id: 3,
       name: "Auto Farhat",
       image: Image1,
-      link : ''
+      link : 'https://www.autofarhat.com/'
     },
     {
       id: 3,
       name: "This Portfolio",
       image: Image3,
-      link : ''
+      link : 'https://malekjoe.github.io/myapp'
     },
     {
       id: 2,
       name: "Front End Design",
       image: Image2,
-      link : ''
+      link : 'https://github.com/malekjoe/OgeroTraining.git'
     },
   ];
   const filterData = [
