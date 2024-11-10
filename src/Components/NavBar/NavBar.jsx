@@ -13,12 +13,12 @@ const data = [
   { label: "RESUME", to: "/resume" },
   { label: "CONTACT ME", to: "/contact" },
 ];
-
-const NavBar = () => {
-  const [ToogleIcon, setToogleIcon] = useState(false);
+const NavBar = ({ handleNavbarToggle, navbarOpen }) => {
+  const [ToogleIcon, setToogleIcon] = useState(navbarOpen);
 
   const handleToogleIcon = (close = false) => {
     setToogleIcon(close ? false : !ToogleIcon);
+    handleNavbarToggle(); // Notify parent about the state change
   };
 
   return (
@@ -49,5 +49,4 @@ const NavBar = () => {
     </div>
   );
 };
-
-export default NavBar;
+export default NavBar

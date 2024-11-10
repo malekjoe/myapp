@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../Components/PageHeaderContent/Header.jsx";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import { Animate } from "react-simple-animate";
 import "./Contact.scss";
 import emailjs from "emailjs-com";
@@ -42,7 +42,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <Header header="My Contact" icon={<BsInfoCircleFill size={40} />} />
+      <Header header="My Contact" icon={<MdEmail size={40} />} />
       <div className="contact__content">
         <Animate play duration={1} delay={0} start={{ transform: "translateX(-200px)" }} end={{ transform: "translateX(0px)" }}>
           <h3 className="contact__content__header-text">Let's Talk</h3>

@@ -3,7 +3,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import Header from "../../Components/PageHeaderContent/Header.jsx";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { SiReaddotcv } from "react-icons/si";
 import 'react-vertical-timeline-component/style.min.css'
 import './Resume.scss';
 import {MdWork} from 'react-icons/md';
@@ -50,7 +50,7 @@ const Resume = () => {
   };
   return (
     <section id="resume" className="resume">
-      <Header header="My resume" icon={<BsInfoCircleFill size={40} />} />
+      <Header header="My resume" icon={<SiReaddotcv size={40} />} />
       <div className="timeline">
         <div className="timeline__experience">
           <h3 className="timeline__experience__header-text">Experience</h3>

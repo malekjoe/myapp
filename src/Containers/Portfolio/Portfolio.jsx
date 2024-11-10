@@ -1,6 +1,7 @@
 import Header from "../../Components/PageHeaderContent/Header.jsx";
 import { useState } from "react";
-import { BsInfoCircleFill } from "react-icons/bs";
+import { GrProjects } from "react-icons/gr";
+
 import Image1 from "../../Images/Image1.jpg";
 import Image2 from "../../Images/Image2.jpg";
 import Image3 from "../../Images/image3.jpg";
@@ -57,7 +58,7 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio" className="portfolio">
-      <Header header="My portfolio" icon={<BsInfoCircleFill size={40} />} />
+      <Header header="My portfolio" icon={<GrProjects size={40} />} />
       <div className="portfolio__content">
         <ul className="portfolio__content__filter">
           {filterData.map((item, index) => (

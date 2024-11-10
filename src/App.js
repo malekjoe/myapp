@@ -7,31 +7,25 @@ import Skills from './Containers/Skills/Skills.jsx';
 import Portfolio from './Containers/Portfolio/Portfolio.jsx';
 import Contact from './Containers/Contact/Contact.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
-import ParticlesComponent from './Particles/Particles.js'
-
-
-
-
-
+import ParticlesComponent from './Particles/Particles.js';
+import { useState } from 'react';
 
 function App() {
-  const location = useLocation ();
-  console.log(location);
+  const location = useLocation();
+  const [navbarOpen, setNavbarOpen] = useState(false); // State to track navbar visibility
+  const renderParticlesJsInHomePage = location.pathname === "/";
 
-  const renderParticlesJsInHomePage = location.pathname==="/";
-
+  const handleNavbarToggle = () => {
+    setNavbarOpen(!navbarOpen); // Toggle navbar state
+  };
 
   return (
     <div className="App">
+      {renderParticlesJsInHomePage && <ParticlesComponent id="Particles"/>}
 
-      {renderParticlesJsInHomePage &&
-      <ParticlesComponent id="Particles"/>
-      }
+      <NavBar handleNavbarToggle={handleNavbarToggle} navbarOpen={navbarOpen} />
       
-      
-      <NavBar />
-      
-      <div className='App__Main-Page-cotent'>
+      <div className={`App__Main-Page-content ${navbarOpen ? 'navbar-open' : ''}`}>
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -41,8 +35,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-
-  
     </div>
   );
 }

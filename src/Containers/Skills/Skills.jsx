@@ -1,6 +1,7 @@
 import Header from "../../Components/PageHeaderContent/Header.jsx";
 import './Skills.scss';
-import { BsInfoCircleFill } from "react-icons/bs";
+import { GiSkills } from "react-icons/gi";
+
 import { Animate, AnimateKeyframes } from "react-simple-animate";
 import { Line } from "rc-progress";
 const Skills = () => {
@@ -63,7 +64,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="Skills">
-      <Header header="My Skills" icon={<BsInfoCircleFill size={40} />} />
+      <Header header="My Skills" icon={<GiSkills size={40} />} />
 
       <div className="Skills__content-wrapper">
         {SkillsData.map((item, i) => (
