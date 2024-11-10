@@ -8,6 +8,8 @@ import Portfolio from './Containers/Portfolio/Portfolio.jsx';
 import Contact from './Containers/Contact/Contact.jsx';
 import NavBar from './Components/NavBar/NavBar.jsx';
 import ParticlesWrapper from './Particles/ParticlesWrapper.js';
+import useMediaQuery from './useMediaQuery.js';  // Import your custom hook
+
 import { useState } from 'react';
 
 function App() {
@@ -16,13 +18,14 @@ function App() {
   const handleNavbarToggle = () => {
     setNavbarOpen(!navbarOpen);
   };
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return (
     <div className="App">
       <ParticlesWrapper />
       <NavBar handleNavbarToggle={handleNavbarToggle} navbarOpen={navbarOpen} />
 
-      <div className={`App__Main-Page-content ${navbarOpen ? 'navbar-open' : ''}`}>
+      <div className={`App__Main-Page-content ${navbarOpen && isMobile ? 'navbar-open' : ''}`}>
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

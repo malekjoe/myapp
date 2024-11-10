@@ -7,14 +7,19 @@
 
   }
 }
-.App__Main-Page-content.navbar-open {
-  position: relative;
-  z-index: -1;
-}
+
+
 .navbar__container__menu {
   /* Other styles */
   z-index: 1; /* Ensure the menu has a higher z-index when active */
 }
 .App__Main-Page-content {
   transition: all 0.3s ease;
+}
+@media only screen and (max-width:768px) {
+  .App__Main-Page-content.navbar-open {
+    position: relative;
+    z-index: -1;
+  }
+  
 }
