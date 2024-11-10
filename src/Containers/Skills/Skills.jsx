@@ -1,16 +1,114 @@
-
-import Header from '../../Components/PageHeaderContent/Header.jsx';
-import {BsInfoCircleFill} from 'react-icons/bs'
+import Header from "../../Components/PageHeaderContent/Header.jsx";
+import './Skills.scss';
+import { BsInfoCircleFill } from "react-icons/bs";
+import { Animate, AnimateKeyframes } from "react-simple-animate";
+import { Line } from "rc-progress";
 const Skills = () => {
-  return (
-    <section id='skills' className='skills'>
-    <Header 
-    header='My Skills'
-    icon={<BsInfoCircleFill size={40}/>}
-    />
+  const SkillsData = [
+    {
+      label: "Front End",
+      data: [
+        {
+          skillName: "HTML",
+          percentage: "100",
+        },
+        {
+          skillName: "CSS",
+          percentage: "90",
+        },
+        {
+          skillName: "Javascript",
+          percentage: "90",
+        },
+        {
+          skillName: "React.js",
+          percentage: "70",
+        },
+      ],
+    },
+    {
+      label: "Back ENd",
+      data: [
+        {
+          skillName: "JAVA",
+          percentage: "70",
+        },
 
-  </section>
+        {
+          skillName: "PHP",
+          percentage: "60",
+        },
+
+        {
+          skillName: "MYSQL",
+          percentage: "40",
+        },
+      ],
+    },
+    {
+      label: "DATABASES",
+      data: [
+        {
+          skillName: "ORACLE",
+          percentage: "70",
+        },
+
+        {
+          skillName: "MANGODB",
+          percentage: "60",
+        },
+      ],
+    },
+  ];
+
+  return (
+    <section id="skills" className="Skills">
+      <Header header="My Skills" icon={<BsInfoCircleFill size={40} />} />
+
+      <div className="Skills__content-wrapper">
+        {SkillsData.map((item, i) => (
+          <div className="Skills__content-wrapper__innerContent" key={i}>
+            <Animate
+              play
+              duration={1}
+              delay={0.3}
+              start={{
+                transform: "translateX(-200px)",
+              }}
+              end={{
+                transform: "translateX(0px)",
+              }}
+            >
+              <h3 className="Skills__content-wrapper__innerContent__Category-text">
+                {item.label}
+              </h3>
+              <div className="Skills__content-wrapper__innerContent__progressbar-container">
+                {item.data.map((skillItem, j) => (
+                  <AnimateKeyframes
+                    play
+                    duration={1}
+                    keyframes={["opacity:1", "opacity:0"]}
+                    iterationCount="1"
+                  >
+                    <div className="progressBar-wrapper" key={j}>
+                      <p>{skillItem.skillName}</p>
+                      <Line
+                        percent={skillItem.percentage}
+                        strokeWidth="2"
+                        strokeColor="var(--yellow-theme-main-color)"
+                        trailWidth={"3"}
+                        strokeLinecap="square"
+                      />
+                    </div>
+                  </AnimateKeyframes>
+                ))}
+              </div>
+            </Animate>
+          </div>
+        ))}
+      </div>
+    </section>
   );
-}
+};
 
 export default Skills;

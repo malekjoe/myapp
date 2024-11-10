@@ -42,7 +42,7 @@ button{
     overflow: hidden;
     white-space: nowrap;
     animation: typinEffectAnimation 3s steps(30,end);
-    z-index: -1;
+  
   }
 }
 @media only screen and (max-width :550px){

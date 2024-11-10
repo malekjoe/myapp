@@ -13,6 +13,7 @@ import ParticlesComponent from './Particles/Particles.js'
 
 
 
+
 function App() {
   const location = useLocation ();
   console.log(location);
@@ -40,6 +41,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+
+  
     </div>
   );
 }
