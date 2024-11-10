@@ -73,16 +73,16 @@ const Portfolio = () => {
             onMouseLeave={()=>handleHover(null)}>
               
                   <div className="portfolio__content__cards__item__image-wrapper">
-                    <a>
-                      <img src={item.image} alt="Site_Image" />
-                    </a>
+                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+  <img src={item.image} alt="Site_Image" />
+</a>
                   </div>
                   <div className="overlay">
                     {
                       index===hoveredValue &&(
                         <div>
                           <p>{item.name}</p>
-                          <button>Visit</button>
+                          <button onClick={() => window.open(item.link, '_blank')}>Visit</button>
                         </div>
                       )
                     }
