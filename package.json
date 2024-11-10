@@ -3,7 +3,7 @@
     "type": "git",
     "url": "https://github.com/malekjoe/myapp.git"
   },
-  "homapage": "https://malekjoe.github.io/myapp",
+"homepage": "https://malekjoe.github.io/myapp",
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
