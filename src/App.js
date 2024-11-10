@@ -1,5 +1,5 @@
 import './App.scss';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './Containers/Home/home.jsx';
 import About from './Containers/About/About.jsx';
 import Resume from './Containers/Resume/Resume.jsx';
@@ -26,14 +26,16 @@ function App() {
       <NavBar handleNavbarToggle={handleNavbarToggle} navbarOpen={navbarOpen} />
       
       <div className={`App__Main-Page-content ${navbarOpen ? 'navbar-open' : ''}`}>
-        <Routes>
-          <Route index path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Router>
+          <Routes>
+            <Route index path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Router>
       </div>
     </div>
   );
