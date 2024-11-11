@@ -11,20 +11,34 @@ const personalDetails = [
     value: "Malek Jokhadar",
   },
   {
-    label: "age",
+    label: "Age",
     value: "19",
   },
   {
-    label: "address",
+    label: "Address",
     value: "Beirut ,Tarik Jdide",
   },
   {
     label: "Email ",
-    value: "malekjokhadar17@gmail.com",
+    value: (
+      <a href="mailto:malekjokhadar17@gmail.com"
+      style={{
+        textDecoration:"none",
+        color:"inherit"
+  
+      }}
+      >malekjokhadar17@gmail.com</a>
+    ),
   },
   {
-    label: "contact No",
-    value: "+961 81631347",
+    label: "Contact No",
+    value: <a href="tel:+96181631347"
+     style={{
+      textDecoration:"none",
+      color:"inherit"
+
+    }}
+    >+961 81631347</a>,
   },
 ];
 

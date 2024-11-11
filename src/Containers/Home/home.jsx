@@ -12,7 +12,9 @@ const Home = () => {
       <div className="home_text_wrapper">
         <h1>
           Hello , I'm Malek
-          <br />
+    <br />
+      
+        
           Front end Developer
         </h1>
       </div>

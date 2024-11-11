@@ -39,11 +39,12 @@ const Skills = () => {
           skillName: "PHP",
           percentage: "60",
         },
-
         {
-          skillName: "MYSQL",
-          percentage: "40",
+          skillName: "PL/SQL",
+          percentage: "70",
         },
+
+      
       ],
     },
     {
@@ -55,8 +56,12 @@ const Skills = () => {
         },
 
         {
-          skillName: "MANGODB",
+          skillName: "MONGODB",
           percentage: "60",
+        },
+        {
+          skillName: "MYSQL",
+          percentage: "40",
         },
       ],
     },

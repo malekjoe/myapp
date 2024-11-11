@@ -12,11 +12,12 @@ const Resume = () => {
   const data = {
     experience: [
       {
-        title: "Customer Service Agent at Zaatar W Zeit",
-        subTitle: "Beirut , Achrafieh",
-        description: "Team Collaboration,Product Knowledge",
-        date : "2022-2023"
-      },
+        title: "Training at Ogero (frontend developer using react.js)",
+        subTitle: "Beirut , Hamra",
+        description:
+          ", state management, props,lifecycle methods and MUI components ,strong understanding of nested and dynamic routes ",
+      date : "2024-present"
+        },
       {
         title: "Customer Service Agent at Vfs Global",
         subTitle: "Beirut , Hamra",
@@ -24,15 +25,15 @@ const Resume = () => {
           "Customer Relationship Management (CRM), Empathy and Patience, Conflict Resolution",
           date : "2023-2024"
         },
-      {
-        title: "Training at Ogero (frontend developer using react.js)",
-        subTitle: "Beirut , Hamra",
-        description:
-          ", state management, props,lifecycle methods and MUI components ,strong understanding of nested and dynamic routes ",
-      date : "2024-present"
-        },
+    
     ],
     education: [
+      {
+        title: "University",
+        subTitle: "Conservatoire national des arts et métiers (CNAM)",
+        description: "continuing my studies (Informatique | Cmputer Sciences)",
+            date : "2022-present"
+      },
       {
         title: "Higher Secondary",
         subTitle: "Riad Al Soloh Secondary",
@@ -40,12 +41,7 @@ const Resume = () => {
           date : "2019-2022"
 
       },
-      {
-        title: "University",
-        subTitle: "Conservatoire national des arts et métiers (CNAM)",
-        description: "continuing my studies (Informatique | Cmputer Sciences)",
-            date : "2022-present"
-      },
+  
     ],
   };
   return (

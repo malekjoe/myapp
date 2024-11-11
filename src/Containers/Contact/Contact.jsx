@@ -11,6 +11,7 @@ const Contact = () => {
     email: "",
     description: ""
   });
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
     setFormData({
@@ -19,21 +20,45 @@ const Contact = () => {
     });
   };
 
+  const validate = () => {
+    const newErrors = {};
+    if (formData.name.length > 50) {
+      newErrors.name = "Name must be less than 50 characters.";
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Invalid email format.";
+    }
+    if (formData.description.length > 500) {
+      newErrors.description = "Description must be less than 500 characters.";
+    }
+    return newErrors;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newErrors = validate();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    setErrors({});
+    
     const templateParams = {
       to_name: "Malek Jokhadar",
       from_name: formData.name,
       from_email: formData.email,
       message: formData.description,
     };
+
     emailjs.send(
-      "service_ty34poo",        // Replace with your EmailJS service ID
-      "template_gudq234",       // Replace with your EmailJS template ID
+      "service_ty34poo",
+      "template_gudq234",
       templateParams,
-      "0lwgC0EFnsqYUShA4"            // Replace with your EmailJS user ID
+      "0lwgC0EFnsqYUShA4"
     ).then((response) => {
       alert("Email sent successfully!");
+      setFormData({ name: "", email: "", description: "" });
     }).catch((error) => {
       console.error("Failed to send email", error);
       alert("Failed to send email.");
@@ -60,6 +85,7 @@ const Contact = () => {
                   onChange={handleChange}
                 />
                 <label htmlFor="name" className="nameLabel">Name</label>
+                {errors.name && <p className="error">{errors.name}</p>}
               </div>
               <div>
                 <input
@@ -71,6 +97,7 @@ const Contact = () => {
                   onChange={handleChange}
                 />
                 <label htmlFor="email" className="emailLabel">Email</label>
+                {errors.email && <p className="error">{errors.email}</p>}
               </div>
               <div>
                 <textarea
@@ -82,6 +109,7 @@ const Contact = () => {
                   onChange={handleChange}
                 />
                 <label htmlFor="description" className="descriptionLabel">Description</label>
+                {errors.description && <p className="error">{errors.description}</p>}
               </div>
             </div>
             <button onClick={handleSubmit}>Submit</button>
