@@ -12,7 +12,7 @@ const personalDetails = [
   },
   {
     label: "Age",
-    value: "19",
+    value: "20",
   },
   {
     label: "Address",
@@ -53,8 +53,8 @@ const About = () => {
         <div className="about__content__personalWrapper">
           <Animate
             play
-            duration={1.5}
-            delay={1}
+            duration={1.0}
+    
             start={{
               transform: "translateX(-1000px)",
               opacity:0
@@ -69,8 +69,8 @@ const About = () => {
           </Animate>
           <Animate
             play
-            duration={1.5}
-            delay={1}
+            duration={1.0}
+          
             start={{
               transform: "translateX(600px)",
               opacity:0
@@ -96,8 +96,8 @@ const About = () => {
         <div className="about__content__servicesWrapper">
         <Animate
             play
-            duration={1.5}
-            delay={1}
+            duration={1.0}
+            delay={0.5}
             start={{
               transform: "translateX(250px)",
               opacity:0

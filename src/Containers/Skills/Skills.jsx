@@ -40,6 +40,10 @@ const Skills = () => {
           percentage: "60",
         },
         {
+          skillName: "Laravel",
+          percentage: "60",
+        },
+        {
           skillName: "PL/SQL",
           percentage: "70",
         },
