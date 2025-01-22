@@ -47,6 +47,10 @@ const Skills = () => {
           skillName: "PL/SQL",
           percentage: "70",
         },
+        {
+          skillName: "RESTful APIs",
+          percentage: "80",
+        },
 
       
       ],
