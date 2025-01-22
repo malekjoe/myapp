@@ -1,5 +1,6 @@
 import './App.scss';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
 import Home from './Containers/Home/home.jsx';
 import About from './Containers/About/About.jsx';
 import Resume from './Containers/Resume/Resume.jsx';
@@ -26,14 +27,17 @@ function App() {
       <NavBar handleNavbarToggle={handleNavbarToggle} navbarOpen={navbarOpen} />
 
       <div className={`App__Main-Page-content ${navbarOpen && isMobile ? 'navbar-open' : ''}`}>
-        <Routes>
-          <Route index path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      <Routes>
+  <Route index path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/resume" element={<Resume />} />
+  <Route path="/skills" element={<Skills />} />
+  <Route path="/portfolio" element={<Portfolio />} />
+  <Route path="/contact" element={<Contact />} />
+  {/* Add a wildcard route that redirects to the base path */}
+  <Route path="*" element={<Navigate to="/" />} />
+</Routes>
+
       </div>
     </div>
   );
