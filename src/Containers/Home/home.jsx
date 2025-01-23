@@ -15,7 +15,8 @@ const Home = () => {
     <br />
       
         
-          Full Stack Web Developer
+          Full Stack Web
+          <br /> Developer
         </h1>
       </div>
       <Animate
