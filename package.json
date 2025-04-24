@@ -3,7 +3,7 @@
     "type": "git",
     "url": "https://github.com/malekjoe/myapp.git"
   },
-"homepage": "https://malekjoe.github.io/myapp",
+  "homepage": "https://malekjoe.github.io/myapp",
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
@@ -61,6 +61,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.3.0"
   }
 }
