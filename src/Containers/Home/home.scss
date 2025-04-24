@@ -1,0 +1,73 @@
+.home{
+  position: relative;
+  text-align: center;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  display:flex;
+  flex-direction: column;
+  &__contact-me{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+button{
+  cursor: pointer;
+  padding: 10px 70px;
+  font-size: 2rem;
+  background-color: transparent;
+  color: var(--yellow-theme-main-color);
+  border: 1.5px solid var(--yellow-theme-main-color);
+  border-radius: 12px;
+  font-weight: 500;
+  &:hover{
+    background-color: var(--yellow-theme-main-color);
+    color: black;
+  }
+}  }
+
+
+}
+.home_text_wrapper{
+  display: flex;
+  justify-content: center;
+  h1{
+    color:  var(--yellow-theme-main-color);
+    margin: 0px;
+    font-weight: 500;
+    font-size: 8rem;
+    line-height: 10rem;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typinEffectAnimation 3s steps(30,end);
+  
+  }
+}
+@media only screen and (max-width :550px){
+  .home_text_wrapper h1{
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+  
+}
+@media only screen and (min-width :551px) and (max-width:768px){
+  .home_text_wrapper h1{
+    font-size: 4rem;
+    line-height: 6rem;
+  }
+}
+@media only screen and (min-width :769px)and (max-width:990px){
+  .home_text_wrapper h1{
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+}
+@keyframes typinEffectAnimation {
+  from{
+    width: 0%;
+  }
+  to{
+    width: 100%;
+  }
+}
