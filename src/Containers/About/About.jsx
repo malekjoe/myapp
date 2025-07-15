@@ -43,7 +43,7 @@ const personalDetails = [
 ];
 
 const JobSummary =
-  "As a 3rd-year computer science student at Cnam University and an intern web developer at Ogero, I balance both studying and working, developing my skills in web development using React.js. My responsibilities include building user-friendly web applications, identifying and resolving bugs, and staying updated with the latest technologies. I’m known for my creativity, and I excel in teamwork, effectively communicating with colleagues at Ogero and university. My strong problem-solving abilities and time management skills help me meet deadlines. I am passionate about becoming an engineer in software development and look forward to contributing to the field.";
+      "As a 3rd-year computer science student at Cnam University and a freelance web developer, I balance academic learning with hands-on experience in building user-friendly web applications using React.js and modern development tools. I take pride in delivering functional, clean, and responsive designs while debugging efficiently and staying up to date with the latest technologies. I’m known for my creativity and strong communication skills, which support effective collaboration with clients and peers. My strengths in problem-solving and time management enable me to meet tight deadlines. I am passionate about software development and eager to grow into a professional engineer who makes a meaningful impact in the tech industry."
 
 const About = () => {
   return (

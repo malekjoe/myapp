@@ -71,15 +71,28 @@
           left: 50%;
           transform: translate(-50%,-50%);
           text-align: center;
+          width: 90%;
+          max-width: 300px;
 
           p{
             color: black;
             margin: 0px;
-            font-size: 4rem ;
+            font-size: 2.5rem;
             position: relative;
-            overflow: hidden;
-            white-space: nowrap;
+            white-space: normal;
+            line-height: 1.2;
+            font-weight: 600;
             animation: typingEffect 1s steps(30,end);
+            
+            &.description{
+              font-size: 1.2rem;
+              margin-top: 10px;
+              margin-bottom: 15px;
+              white-space: normal;
+              line-height: 1.4;
+              font-weight: 400;
+              animation: none;
+            }
           }
           button{
             cursor: pointer;
@@ -123,7 +136,13 @@
     &__item{
       .overlay{
         div > p {
-          font-size: 2rem;
+          font-size: 1.8rem;
+          white-space: normal;
+          line-height: 1.2;
+          
+          &.description{
+            font-size: 1rem;
+          }
         }
       }
     }

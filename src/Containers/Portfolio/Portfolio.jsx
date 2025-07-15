@@ -2,30 +2,37 @@ import Header from "../../Components/PageHeaderContent/Header.jsx";
 import { useState } from "react";
 import { GrProjects } from "react-icons/gr";
 
-import Image1 from "../../Images/Image1.jpg";
-import Image2 from "../../Images/Image2.jpg";
-import Image3 from "../../Images/image3.jpg";
 import './Portfolio.scss'
 const Portfolio = () => {
 
   const Images = [
     {
       id: 3,
-      name: "Auto Farhat",
-      image: Image1,
-      link : 'https://www.autofarhat.com/'
+      name: "Stock Management System",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      link: 'https://youtu.be/XeQt4KEFys8',
+      description: "A comprehensive stock management system with real-time tracking, inventory control, and analytics dashboard."
     },
     {
       id: 3,
-      name: "This Portfolio",
-      image: Image3,
-      link : 'https://malekjoe.github.io/myapp'
+      name: "Clinic Management System",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", // coding themed image
+      link: 'https://youtu.be/FoMt5utWpFs',
+      description: "A modern clinic management system for appointments, patient records, billing, and staff coordination."
+    },
+    {
+      id: 3,
+      name: "Auto Farhat",
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      link: 'https://www.autofarhat.com/',
+      description: "Informative website for moving company."
     },
     {
       id: 2,
       name: "Front End Design",
-      image: Image2,
-      link : 'https://github.com/malekjoe/OgeroTraining.git'
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80",
+      link: 'https://github.com/malekjoe/OgeroTraining.git',
+      description: "Modern responsive web design with interactive components and animations."
     },
   ];
   const filterData = [
@@ -74,7 +81,7 @@ const Portfolio = () => {
               
                   <div className="portfolio__content__cards__item__image-wrapper">
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
-  <img src={item.image} alt="Site_Image" />
+  <img src={item.image} alt={item.name} />
 </a>
                   </div>
                   <div className="overlay">
@@ -82,6 +89,7 @@ const Portfolio = () => {
                       index===hoveredValue &&(
                         <div>
                           <p>{item.name}</p>
+                          <p className="description">{item.description}</p>
                           <button onClick={() => window.open(item.link, '_blank')}>Visit</button>
                         </div>
                       )

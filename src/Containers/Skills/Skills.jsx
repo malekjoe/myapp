@@ -51,8 +51,19 @@ const Skills = () => {
           skillName: "RESTful APIs",
           percentage: "80",
         },
-
-      
+        {
+          skillName : "Node.js",
+          percentage : "60",
+        },
+        {
+          skillName : "Express.js",
+          percentage : "60",
+        },
+        {
+          skillName : "Golang",
+          percentage : "60",
+        },
+     
       ],
     },
     {
@@ -71,8 +82,36 @@ const Skills = () => {
           skillName: "MYSQL",
           percentage: "40",
         },
+        {
+          skillName : "PostgreSQL",
+          percentage : "80",
+        },
+        
+        
       ],
     },
+    {
+      label : "Wordpress",
+      data : [
+        {
+          skillName : "Woocommere",
+          percentage : "90",
+        },
+        {
+          skillName : "Elementor",
+          percentage : "70",
+        },
+        {
+          skillName : "Theme Customization and integration",
+          percentage : "70",
+        },
+        {
+          skillName : "plugins customization",
+          percentage : "90",
+        },
+        
+      ]
+    }
   ];
 
   return (
